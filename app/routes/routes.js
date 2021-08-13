@@ -6,13 +6,13 @@ module.exports = [
 			return '<h1>Hello World!</h1>';
 		},
 	},
-  {
-    method: 'POST',
-    path: '/',
-    handler: (request, h) => {
-			return '<h1>Hello Tree Builder!</h1>';
+	{
+		method: 'POST',
+		path: '/tree',
+		handler: (request, h) => {
+			return '<h1>Hello Tree formatter!</h1>';
 		},
-  },
+	},
 	{
 		method: 'GET',
 		path: '/{any*}',
@@ -20,4 +20,4 @@ module.exports = [
 			return '404';
 		},
 	},
-];
+]
