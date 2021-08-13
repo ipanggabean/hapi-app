@@ -1,3 +1,5 @@
+var treeFormat = require('../controllers/api/treeformat')
+
 module.exports = [
 	{
 		method: 'GET',
@@ -9,15 +11,13 @@ module.exports = [
 	{
 		method: 'POST',
 		path: '/tree',
-		handler: (request, h) => {
-			return '<h1>Hello Tree formatter!</h1>';
-		},
+		handler: treeFormat,
 	},
 	{
 		method: 'GET',
 		path: '/{any*}',
 		handler: (request, h) => {
-			return '404';
+			return h.response("Page not found").code(404);
 		},
 	},
 ]
